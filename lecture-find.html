@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- 위 3개의 메타 태그는 *반드시* head 태그의 처음에 와야합니다; 어떤 다른 콘텐츠들은 반드시 이 태그들 *다음에* 와야 합니다 -->
+    <title>얼라인캠퍼스 공유형온라인 창업교육플랫폼</title>
+
+    <!-- 부트스트랩 -->
+    <link href="./src/css/desktop.css" rel="stylesheet" />
+
+    <!-- IE8 에서 HTML5 요소와 미디어 쿼리를 위한 HTML5 shim 와 Respond.js -->
+    <!-- WARNING: Respond.js 는 당신이 file:// 을 통해 페이지를 볼 때는 동작하지 않습니다. -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body class="page-lecture-find">
+    <div id="wrap">
+      <div class="content-box container-fluid">
+        <div class="site-header site-header-sub row-no-gutters">
+          <div class="site-logo">
+            <a href="/index.html" class="main-logo"></a>
+          </div>
+          <div class="lnb col-lg-9">
+            <ul class="lnb-list clearfix">
+              <li class="lnb-item">
+                <a class="btn btn-link n-square" href="javascript:void(0)">
+                  얼라인캠퍼스
+                </a>
+                <ul class="depth">
+                  <li>
+                    <a class="btn btn-link" href="javascript:void(0)"
+                      >캠퍼스소개</a
+                    >
+                  </li>
+                  <li>
+                    <a class="btn btn-link" href="javascript:void(0)"
+                      >참여대학</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="lnb-item">
+                <a class="btn btn-link n-square" href="/lecture-find.html">
+                  강좌찾기
+                  <span class="menu-emphasis"></span>
+                </a>
+                <ul class="depth">
+                  <li>
+                    <a class="btn btn-link" href="/lecture-find.html"
+                      >전체강좌보기</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="lnb-item">
+                <a class="btn btn-link n-square" href="javascript:void(0)"
+                  >커뮤니티</a
+                >
+                <ul class="depth">
+                  <li>
+                    <a class="btn btn-link" href="javascript:void(0)"
+                      >공지사항</a
+                    >
+                  </li>
+                  <li>
+                    <a class="btn btn-link" href="javascript:void(0)"
+                      >강좌문의</a
+                    >
+                  </li>
+                  <li>
+                    <a class="btn btn-link" href="javascript:void(0)">FAQ</a>
+                  </li>
+                  <li>
+                    <a class="btn btn-link" href="javascript:void(0)"
+                      >이용가이드</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="gnb col-lg-3">
+            <a
+              href="javascript:void(0)"
+              class="btn btn-link login-logo bg-img"
+            ></a>
+            <a href="javascript:void(0)" class="btn btn-link n-square"
+              >로그인</a
+            >
+            <a href="javascript:void(0)" class="btn btn-link n-square"
+              >회원가입</a
+            >
+            <a href="javascript:void(0)" class="btn btn-link n-square"
+              >공지사항</a
+            >
+          </div>
+        </div>
+        <div class="snb row-no-gutters"></div>
+        <div class="site-content row-no-gutters"></div>
+        <div class="site-footer row-no-gutters clearfix">
+          <div class="footer-left">
+            <div class="footer-link btn-group">
+              <a href="javascript:void(0)" class="btn btn-link"
+                >개인정보처리방침</a
+              >
+              <a href="javascript:void(0)" class="btn btn-link">이용약관</a>
+              <a href="javascript:void(0)" class="btn btn-link"
+                >저작권보호정책</a
+              >
+            </div>
+            <address>
+              경기도 안산시 상록구 한양대학로 55 한양대학교 산업연협력관
+              204호<br />
+              Copyright&copy; HBI Hanyang University,ltd. All rights reserved.
+            </address>
+          </div>
+          <div class="footer-right">
+            <i class="footer-logo bg-img"></i>
+          </div>
+        </div>
+      </div>
+      <div class="search-box container">
+        <div class="content-wrapper container">
+          <div class="site-logo row-no-gutters">
+            <a href="./index.html" class="search-logo bg-img"></a>
+          </div>
+          <div class="sub-logo row-no-gutters">
+            <span class="search-sub-logo bg-img"></span>
+          </div>
+          <form action="">
+            <div class="form-group row-no-gutters search-input">
+              <div class="input-group input-wrapper row-no-gutters">
+                <input
+                  type="text"
+                  class="form-control input-lg"
+                  placeholder="검색어를 입력하세요."
+                />
+                <span class="input-group-addon">검색</span>
+              </div>
+            </div>
+            <div class="search-category row-no-gutters">
+              <div class="category-group row-no-gutters">
+                <h3 class="category-title n-square">대학별 검색</h3>
+                <div class="col-lg-4">
+                  <button
+                    class="col-lg-12 btn btn-primary category-btn clearfix"
+                  >
+                    <span class="title">경희대</span>
+                    <span class="number">1,028</span>
+                  </button>
+                </div>
+                <div class="col-lg-4">
+                  <button
+                    class="col-lg-12 btn btn-primary category-btn clearfix"
+                  >
+                    <span class="title">동국대</span>
+                    <span class="number">67</span>
+                  </button>
+                </div>
+                <div class="col-lg-4">
+                  <button
+                    class="col-lg-12 btn btn-primary category-btn clearfix"
+                  >
+                    <span class="title">산기대</span>
+                    <span class="number">205</span>
+                  </button>
+                </div>
+                <div class="col-lg-4">
+                  <button
+                    class="col-lg-12 btn btn-primary category-btn clearfix"
+                  >
+                    <span class="title">성균관대</span>
+                    <span class="number">302</span>
+                  </button>
+                </div>
+                <div class="col-lg-4">
+                  <button
+                    class="col-lg-12 btn btn-primary category-btn clearfix"
+                  >
+                    <span class="title">아주대</span>
+                    <span class="number">84</span>
+                  </button>
+                </div>
+                <div class="col-lg-4">
+                  <button
+                    class="col-lg-12 btn btn-primary category-btn clearfix"
+                  >
+                    <span class="title">한양대ERICA</span>
+                    <span class="number">1,783</span>
+                  </button>
+                </div>
+              </div>
+              <div class="category-group row-no-gutters">
+                <h3 class="category-title n-square">
+                  분류별 검색(대학별 특화 & 산업분류)
+                </h3>
+                <div class="col-lg-6">
+                  <button
+                    class="col-lg-12 btn btn-primary category-btn clearfix"
+                  >
+                    <span class="title">디지털 신기술</span>
+                    <span class="number">106</span>
+                  </button>
+                </div>
+                <div class="col-lg-6">
+                  <button
+                    class="col-lg-12 btn btn-primary category-btn clearfix"
+                  >
+                    <span class="title">미디어문화,ICT,IOT</span>
+                    <span class="number">832</span>
+                  </button>
+                </div>
+                <div class="col-lg-6">
+                  <button
+                    class="col-lg-12 btn btn-primary category-btn clearfix"
+                  >
+                    <span class="title">바이오</span>
+                    <span class="number">82</span>
+                  </button>
+                </div>
+                <div class="col-lg-6">
+                  <button
+                    class="col-lg-12 btn btn-primary category-btn clearfix"
+                  >
+                    <span class="title">3D프린팅,소셜벤처</span>
+                    <span class="number">1,012</span>
+                  </button>
+                </div>
+                <div class="col-lg-6">
+                  <button
+                    class="col-lg-12 btn btn-primary category-btn clearfix"
+                  >
+                    <span class="title">스마트모빌리티</span>
+                    <span class="number">0</span>
+                  </button>
+                </div>
+                <div class="col-lg-6">
+                  <button
+                    class="col-lg-12 btn btn-primary category-btn clearfix"
+                  >
+                    <span class="title">신재생에너지</span>
+                    <span class="number">0</span>
+                  </button>
+                </div>
+              </div>
+              <div class="category-group row-no-gutters">
+                <h3 class="category-title n-square">필수강좌 검색</h3>
+                <div class="col-lg-4">
+                  <button
+                    class="col-lg-12 btn btn-primary category-btn clearfix"
+                  >
+                    <span class="title">BR</span>
+                    <span class="number">1,052</span>
+                  </button>
+                </div>
+                <div class="col-lg-4">
+                  <button
+                    class="col-lg-12 btn btn-primary category-btn clearfix"
+                  >
+                    <span class="title">기업가정신</span>
+                    <span class="number">1,052</span>
+                  </button>
+                </div>
+                <div class="col-lg-4">
+                  <button
+                    class="col-lg-12 btn btn-primary category-btn clearfix"
+                  >
+                    <span class="title">비즈니스모델</span>
+                    <span class="number">104</span>
+                  </button>
+                </div>
+                <div class="col-lg-4">
+                  <button
+                    class="col-lg-12 btn btn-primary category-btn clearfix"
+                  >
+                    <span class="title">사업계획서</span>
+                    <span class="number">809</span>
+                  </button>
+                </div>
+                <div class="col-lg-4">
+                  <button
+                    class="col-lg-12 btn btn-primary category-btn clearfix"
+                  >
+                    <span class="title">지식재산권</span>
+                    <span class="number">120</span>
+                  </button>
+                </div>
+                <div class="col-lg-4">
+                  <button
+                    class="col-lg-12 btn btn-primary category-btn clearfix"
+                  >
+                    <span class="title">마캐팅/판로</span>
+                    <span class="number">95</span>
+                  </button>
+                </div>
+                <div class="col-lg-4">
+                  <button
+                    class="col-lg-12 btn btn-primary category-btn clearfix"
+                  >
+                    <span class="title">세무/회계</span>
+                    <span class="number">122</span>
+                  </button>
+                </div>
+                <div class="col-lg-4">
+                  <button
+                    class="col-lg-12 btn btn-primary category-btn clearfix"
+                  >
+                    <span class="title">법률/노무</span>
+                    <span class="number">78</span>
+                  </button>
+                </div>
+                <div class="col-lg-4">
+                  <button
+                    class="col-lg-12 btn btn-primary category-btn clearfix"
+                  >
+                    <span class="title">투자관련</span>
+                    <span class="number">107</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="search-period form-group row-no-gutters">
+              <div class="hover-group">
+                <span class="short bg-img"></span>
+                <span class="middle bg-img"></span>
+                <span class="long bg-img"></span>
+              </div>
+              <input
+                type="range"
+                class="form-control"
+                list="ticks"
+                id="search-period"
+                min="0"
+                max="100"
+                step="50"
+                value="50"
+              />
+              <datalist id="ticks">
+                <option value="0"></option>
+                <option value="50"></option>
+                <option value="100"></option>
+              </datalist>
+              <div class="title-group">
+                <span>1~6주</span>
+                <span>7~12주</span>
+                <span>13주</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <button type="submit" class="btn btn-lg btn-block n-square">
+                강좌검색
+              </button>
+            </div>
+          </form>
+          <div class="search-box-handle">
+            <p class="mag bg-img"></p>
+            <p class="title">강좌<br />찾기</p>
+            <p class="arr bg-img"></p>
+          </div>
+        </div>
+      </div>
+      <div class="left-side">
+        <div class="sitemap-open">
+          <a href="#sitemap-open" class="btn btn-link bg-img menu-btn"></a>
+        </div>
+        <div class="btn-group-vertical menu">
+          <a href="javascript:void(0)" class="btn btn-link bg-img">
+            <div class="sr-only">강좌문의</div>
+          </a>
+          <a href="javascript:void(0)" class="btn btn-link bg-img">
+            <div class="sr-only">마이페이지</div>
+          </a>
+          <a href="javascript:void(0)" class="btn btn-link bg-img">
+            <div class="sr-only">이용가이드</div>
+          </a>
+          <a href="javascript:void(0)" class="btn btn-link bg-img">
+            <div class="sr-only">공지사항</div>
+          </a>
+        </div>
+        <div class="btn-group-vertical sns-menu">
+          <a href="javascript:void(0)" class="btn btn-link bg-img">
+            <div class="sr-only">페이스북 바로가기</div>
+          </a>
+          <a href="javascript:void(0)" class="btn btn-link bg-img">
+            <div class="sr-only">블로그 바로가기</div>
+          </a>
+          <a href="javascript:void(0)" class="btn btn-link bg-img">
+            <div class="sr-only">유튜브 바로가기</div>
+          </a>
+        </div>
+      </div>
+      <div class="right-side">
+        <div class="top-btn">
+          <a href="#site-top" class="bg-img"></a>
+        </div>
+      </div>
+      <div class="sitemap container">
+        <ul class="children-count-5 row-no-gutters">
+          <li class="nav-depth-1 row-no-gutters">
+            <a href="javascript:void(0)" class="n-square row-no-gutters"
+              >센터소개</a
+            >
+            <ul class="children-count-2 row-no-gutters">
+              <li class="nav-depth-2 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <a href="jascript:void(0)">
+                  <span class="logo bg-img"></span>
+                  <span class="title">센터소개</span>
+                </a>
+              </li>
+              <li class="nav-depth-2 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <a href="jascript:void(0)">
+                  <span class="logo bg-img"></span>
+                  <span class="title">참여대학</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-depth-1 row-no-gutters">
+            <a href="javascript:void(0)" class="n-square row-no-gutters"
+              >강좌찾기</a
+            >
+            <ul class="children-count-1 row-no-gutters">
+              <li class="nav-depth-2 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <a href="jascript:void(0)">
+                  <span class="logo bg-img"></span>
+                  <span class="title">전체 강좌보기</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-depth-1 row-no-gutters">
+            <a href="javascript:void(0)" class="n-square row-no-gutters"
+              >커뮤니티</a
+            >
+            <ul class="children-count-4 row-no-gutters">
+              <li class="nav-depth-2 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <a href="jascript:void(0)">
+                  <span class="logo bg-img"></span>
+                  <span class="title">공지사항</span>
+                </a>
+              </li>
+              <li class="nav-depth-2 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <a href="jascript:void(0)">
+                  <span class="logo bg-img"></span>
+                  <span class="title">강좌문의</span>
+                </a>
+              </li>
+              <li class="nav-depth-2 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <a href="jascript:void(0)">
+                  <span class="logo bg-img"></span>
+                  <span class="title">FAQ</span>
+                </a>
+              </li>
+              <li class="nav-depth-2 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <a href="jascript:void(0)">
+                  <span class="logo bg-img"></span>
+                  <span class="title">이용가이드</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-depth-1 row-no-gutters">
+            <a href="javascript:void(0)" class="n-square row-no-gutters"
+              >회원</a
+            >
+            <ul class="children-count-4 row-no-gutters">
+              <li class="nav-depth-2 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <a href="jascript:void(0)">
+                  <span class="logo bg-img"></span>
+                  <span class="title">로그인</span>
+                </a>
+              </li>
+              <li class="nav-depth-2 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <a href="jascript:void(0)">
+                  <span class="logo bg-img"></span>
+                  <span class="title">회원가입</span>
+                </a>
+              </li>
+              <li class="nav-depth-2 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <a href="jascript:void(0)">
+                  <span class="logo bg-img"></span>
+                  <span class="title">아이디찾기</span>
+                </a>
+              </li>
+              <li class="nav-depth-2 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <a href="jascript:void(0)">
+                  <span class="logo bg-img"></span>
+                  <span class="title">비밀번호찾기</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-depth-1 row-no-gutters">
+            <a href="javascript:void(0)" class="n-square row-no-gutters"
+              >마이페이지</a
+            >
+            <ul class="children-count-3 row-no-gutters">
+              <li class="nav-depth-2 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <a href="jascript:void(0)">
+                  <span class="logo bg-img"></span>
+                  <span class="title">수강신청내역</span>
+                </a>
+              </li>
+              <li class="nav-depth-2 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <a href="jascript:void(0)">
+                  <span class="logo bg-img"></span>
+                  <span class="title">수강증명서</span>
+                </a>
+              </li>
+              <li class="nav-depth-2 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <a href="jascript:void(0)">
+                  <span class="logo bg-img"></span>
+                  <span class="title">회원정보수정</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- jQuery (부트스트랩의 자바스크립트 플러그인을 위해 필요합니다) -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- 모든 컴파일된 플러그인을 포함합니다 (아래), 원하지 않는다면 필요한 각각의 파일을 포함하세요 -->
+    <script src="./src/js/bootstrap.js"></script>
+    <script src="./src/js/script.js"></script>
+  </body>
+</html>

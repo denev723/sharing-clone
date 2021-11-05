@@ -5,6 +5,8 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap");
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -7708,4 +7710,166 @@ button.close {
   .hidden-print {
     display: none !important;
   }
+}
+
+body {
+  font-family: "Nanum Gothic";
+}
+
+ul {
+  padding: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+#wrap {
+  position: relative;
+}
+
+.n-square {
+  font-family: "NanumSquare";
+}
+
+.light {
+  font-weight: 300;
+}
+
+.regular {
+  font-weight: 400;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.extra-bold {
+  font-weight: 800;
+}
+
+.bg-img {
+  display: inline-block;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.sitemap-open .menu-btn {
+  background-image: url(/src/images/menu-bar-m.png);
+  width: 22px;
+  height: 20px;
+}
+
+.btn-link {
+  color: #333;
+}
+
+.site-header .lnb .lnb-list {
+  list-style: none;
+}
+
+.site-header .lnb .lnb-list .lnb-item {
+  float: left;
+}
+
+.site-header .lnb .lnb-list .lnb-item .depth {
+  list-style-type: none;
+  display: none;
+}
+
+.site-header .gnb .login-logo {
+  width: 32px;
+  height: 32px;
+  background-image: url(/src/images/login-icon.png);
+}
+
+.left-side {
+  width: 90px;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 35px;
+  padding-bottom: 40px;
+}
+
+.left-side .menu a {
+  margin: 13px 0px;
+}
+
+.left-side .menu a:nth-child(1) {
+  background-image: url(/src/images/left-1.png);
+  width: 25px;
+  height: 22px;
+}
+
+.left-side .menu a:nth-child(2) {
+  background-image: url(/src/images/left-2.png);
+  width: 23px;
+  height: 19px;
+}
+
+.left-side .menu a:nth-child(3) {
+  background-image: url(/src/images/left-3.png);
+  width: 23px;
+  height: 22px;
+}
+
+.left-side .menu a:nth-child(4) {
+  background-image: url(/src/images/left-4.png);
+  width: 23px;
+  height: 22px;
+}
+
+.left-side .sns-menu a {
+  width: 27px;
+  height: 26px;
+}
+
+.left-side .sns-menu a:nth-child(1) {
+  background-image: url(/src/images/btn-facebook.png);
+  margin-bottom: 4px;
+}
+
+.left-side .sns-menu a:nth-child(2) {
+  background-image: url(/src/images/btn-blog.png);
+  margin-bottom: 4px;
+}
+
+.left-side .sns-menu a:nth-child(3) {
+  background-image: url(/src/images/btn-youtube.png);
+}
+
+.right-side {
+  width: 70px;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #fff;
+}
+
+.right-side .top-btn {
+  position: absolute;
+  bottom: 30px;
+  right: 27px;
+}
+
+.right-side .top-btn a {
+  background-image: url(/src/images/top-btn.png);
+  width: 16px;
+  height: 20px;
 }
