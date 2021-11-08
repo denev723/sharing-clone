@@ -374,10 +374,31 @@ ul {
             padding-right: 0;
             padding: 2px;
 
-            .btn-primary {
+            .category-btn {
               padding: 13px 12px;
               background-color: $main-blue;
               border-color: #82a4ff;
+
+              &:hover {
+                border-color: #fff;
+                outline: none;
+                box-shadow: none;
+              }
+
+              &:active,
+              &:focus {
+                border-color: #82a4ff;
+                outline: none;
+                box-shadow: none;
+              }
+
+              &.on {
+                background-color: #fff;
+
+                .title {
+                  color: $main-blue;
+                }
+              }
 
               .title {
                 float: left;
@@ -533,6 +554,13 @@ ul {
           font-size: 13px;
           color: #fff;
           letter-spacing: -1px;
+
+          &:hover,
+          &:focus,
+          &:active {
+            text-decoration: none;
+            color: #fff;
+          }
         }
       }
 
@@ -700,9 +728,16 @@ ul {
       float: left;
 
       .footer-link {
-        a {
+        .btn-link {
           font-size: 14px;
           font-weight: bold;
+
+          &:hover,
+          &:active,
+          &:focus {
+            text-decoration: none;
+            color: inherit;
+          }
         }
       }
 
@@ -813,13 +848,40 @@ ul {
   }
 
   .search-box {
+    position: fixed;
     left: -460px;
     margin-left: 0;
     margin-right: 0;
     width: 550px;
+    transition: left 0.5s ease-in-out;
+
+    .content-wrapper {
+      .search-form {
+        margin-bottom: 132px;
+      }
+    }
 
     .content-bg {
       display: none;
+    }
+  }
+
+  .search-box.on {
+    left: 90px;
+    width: calc(100% - 160px);
+    height: 100vh;
+    overflow: scroll;
+
+    .content-wrapper {
+      .search-box-handle {
+        .arr {
+          background-image: url(/src/images/left-arrow.png);
+        }
+      }
+    }
+
+    .content-bg {
+      display: block;
     }
   }
 
@@ -836,10 +898,16 @@ ul {
       float: left;
 
       .footer-link {
-        a {
-          font-size: 13px;
-          letter-spacing: -1px;
+        .btn-link {
+          font-size: 14px;
           font-weight: bold;
+
+          &:hover,
+          &:active,
+          &:focus {
+            text-decoration: none;
+            color: inherit;
+          }
         }
       }
 
@@ -862,5 +930,10 @@ ul {
         margin-top: 15px;
       }
     }
+  }
+
+  .content-box.on {
+    height: 100vh;
+    overflow: hidden;
   }
 }
