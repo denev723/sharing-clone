@@ -12,4 +12,8 @@ $(document).ready(function () {
   } else {
     console.log("hoo!");
   }
+
+  var searchBg = $(".search-box > .content-bg");
+  var bgHeight = $(".search-box > .content-wrapper").outerHeight();
+  searchBg.css("height", bgHeight);
 });
