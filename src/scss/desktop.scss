@@ -69,8 +69,10 @@ ul {
   .lnb {
     .lnb-list {
       list-style: none;
+
       .lnb-item {
         float: left;
+
         .depth {
           list-style-type: none;
           display: none;
@@ -78,6 +80,7 @@ ul {
       }
     }
   }
+
   .gnb {
     .login-logo {
       width: 32px;
@@ -105,21 +108,25 @@ ul {
     a {
       margin: 13px 0px;
     }
+
     a:nth-child(1) {
       background-image: url(/src/images/left-1.png);
       width: 25px;
       height: 22px;
     }
+
     a:nth-child(2) {
       background-image: url(/src/images/left-2.png);
       width: 23px;
       height: 19px;
     }
+
     a:nth-child(3) {
       background-image: url(/src/images/left-3.png);
       width: 23px;
       height: 22px;
     }
+
     a:nth-child(4) {
       background-image: url(/src/images/left-4.png);
       width: 23px;
@@ -131,14 +138,17 @@ ul {
       width: 27px;
       height: 26px;
     }
+
     a:nth-child(1) {
       background-image: url(/src/images/btn-facebook.png);
       margin-bottom: 4px;
     }
+
     a:nth-child(2) {
       background-image: url(/src/images/btn-blog.png);
       margin-bottom: 4px;
     }
+
     a:nth-child(3) {
       background-image: url(/src/images/btn-youtube.png);
     }
@@ -165,12 +175,15 @@ ul {
       margin: 11px 0px;
       border-radius: 50%;
       border: 1px solid transparent;
+
       &:hover {
         border-color: #eee;
+
         .btn-dot {
           background-color: #333;
         }
       }
+
       .btn-dot {
         display: block;
         width: 8px;
@@ -185,6 +198,7 @@ ul {
     position: absolute;
     top: 414px;
     right: 55px;
+
     .hover-title {
       display: inline-block;
       word-break: keep-all;
@@ -203,6 +217,7 @@ ul {
     position: absolute;
     bottom: 30px;
     right: 27px;
+
     a {
       background-image: url(/src/images/top-btn.png);
       width: 16px;
@@ -214,15 +229,20 @@ ul {
 // search-box
 .search-box {
   position: absolute;
-  left: 90px;
   top: 0;
-  width: 100%;
+  left: 0;
   padding-left: 0;
   padding-right: 0;
+  margin-left: 90px;
+  margin-right: 70px;
+  width: calc(100% - 160px);
+
   .content-wrapper {
+    position: relative;
     float: left;
     width: 550px;
     background-color: gray;
+
     .site-logo {
       .main-logo {
         background-image: url(/src/images/site-logo-main.png);
@@ -232,23 +252,33 @@ ul {
         margin-left: 37px;
       }
     }
+
     .search-sub-logo {
       background-image: url(/src/images/search-sub.png);
       width: 336px;
       height: 163px;
-      margin-left: 75px;
+      margin-top: 30px;
+      margin-left: 53px;
     }
-    form {
-      padding: 0px 103px;
+
+    .search-form {
+      margin-top: 27px;
+      padding: 0px 78px;
       .search-input {
         position: relative;
+        margin-left: 2px;
+        margin-right: 2px;
+        margin-bottom: 0px;
+
         input {
           height: 60px;
           border-right: none;
+
           &::placeholder {
             font-size: 15px;
           }
         }
+
         .search-logo {
           background-image: url(/src/images/search-blue.png);
           width: 20px;
@@ -258,19 +288,231 @@ ul {
           right: 16px;
         }
       }
+
       .search-category {
         .category-group {
+          width: 100%;
+          margin-left: 0;
+          margin-right: 0;
+
           .category-title {
             font-size: 18px;
+            margin-left: 6px;
+            margin-top: 25px;
+            margin-bottom: 10px;
+          }
+
+          div {
+            padding-left: 0;
+            padding-right: 0;
+            padding: 2px;
+
+            .btn-primary {
+              padding: 13px 12px;
+              background-color: #fff;
+              color: #333;
+
+              .title {
+                float: left;
+                letter-spacing: -1px;
+                font-size: 13px;
+              }
+
+              .number {
+                float: right;
+                letter-spacing: -1px;
+                font-size: 13px;
+              }
+            }
           }
         }
       }
+
+      .search-period {
+        margin-left: 2px;
+        margin-right: 2px;
+
+        .title {
+          font-size: 18px;
+          margin-top: 25px;
+          margin-bottom: 10px;
+        }
+
+        input[type="range"] {
+          -webkit-appearance: none;
+          width: 100%;
+          background: transparent;
+          border: none;
+          box-shadow: none;
+          padding: 0;
+          margin-top: -28px;
+
+          &:focus {
+            outline: none;
+          }
+
+          &::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #fff;
+            cursor: pointer;
+            margin-top: -3px;
+          }
+
+          &::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 2px;
+            cursor: pointer;
+            background-color: #82a4ff;
+          }
+
+          &::-moz-range-thumb {
+            width: 8px;
+            height: 8px;
+            border: none;
+            border-radius: 50%;
+            background-color: #fff;
+            cursor: pointer;
+          }
+
+          &::-moz-range-track {
+            width: 100%;
+            height: 2px;
+            cursor: pointer;
+            background-color: #82a4ff;
+          }
+
+          &::-ms-thumb {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            border: none;
+            background-color: #fff;
+            cursor: pointer;
+          }
+
+          &::-ms-track {
+            width: 100%;
+            height: 2px;
+            cursor: pointer;
+            background: transparent;
+            border-color: transparent;
+            color: transparent;
+          }
+
+          &::-ms-fill-lower {
+            height: 2px;
+            background-color: #fff;
+          }
+
+          &::-ms-fill-upper {
+            background-color: #82a4ff;
+          }
+        }
+
+        datalist {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-top: -21px;
+
+          option {
+            display: block;
+            width: 8px;
+            height: 8px;
+            background-color: #fff;
+            border-radius: 50%;
+            padding: 0;
+            min-height: 0;
+          }
+        }
+
+        .title-group {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          font-size: 13px;
+        }
+      }
+
+      .btn-wrapper {
+        margin-left: 2px;
+        margin-right: 2px;
+        margin-top: 35px;
+
+        .submit-btn {
+          height: 56px;
+          font-size: 20px;
+          border: 2px solid #fff;
+          color: #fff;
+          background-color: transparent;
+        }
+      }
+    }
+
+    .site-footer.main {
+      padding: 29px 66px 15px;
+
+      .footer-link {
+        .btn-link {
+          font-size: 13px;
+          letter-spacing: -1px;
+        }
+      }
+
+      address {
+        font-size: 13px;
+        letter-spacing: -1px;
+        padding: 12px;
+        margin-bottom: 0;
+      }
+    }
+
+    .search-box-handle {
+      position: absolute;
+      top: 0;
+      right: -80px;
+      width: 80px;
+      text-align: center;
+      background-color: gray;
+      padding: 34px 0px;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+      cursor: pointer;
+      z-index: 1;
+
+      .mag {
+        background-image: url(/src/images/search.png);
+        width: 27px;
+        height: 27px;
+      }
+
+      .title {
+        font-size: 16px;
+        letter-spacing: -1px;
+      }
+
+      .arr {
+        background-image: url(/src/images/right-arrow.png);
+        width: 12px;
+        height: 18px;
+        margin-top: 88px;
+      }
     }
   }
+
   .content-bg {
     float: left;
     width: calc(100% - 550px);
-    height: 770px;
+    height: 100vh;
     background-color: #333;
+    opacity: 0.4;
   }
+}
+
+// sitemap
+.sitemap {
+  display: none;
 }
