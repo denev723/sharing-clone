@@ -17,6 +17,10 @@ $(document).ready(function () {
   var bgHeight = $(".search-box > .content-wrapper").outerHeight();
   searchBg.css("height", bgHeight);
 
+  var categoryHeight = $(".main-category > .category-list").outerHeight();
+  var categoryBg = $(".main-category > .category-wrapper");
+  categoryBg.css("height", categoryHeight);
+
   $(".search-box-handle").on("click", function () {
     if (!$(".search-box").hasClass("on")) {
       $(".search-box").addClass("on");
@@ -33,6 +37,26 @@ $(document).ready(function () {
       $(this).addClass("on");
     } else {
       $(this).removeClass("on");
+    }
+  });
+
+  $(window).on("scroll", function () {
+    if ($(this).scrollTop() >= 275) {
+      if ($(".page-main .search-box").css("position") !== "fixed") {
+        $(".page-main .search-box")
+          .css({
+            position: "fixed",
+            height: "100%",
+            overflow: "scroll",
+          })
+          .scrollTop(275);
+      }
+    } else {
+      $(".page-main .search-box").css({
+        position: "absolute",
+        height: "",
+        overflow: "",
+      });
     }
   });
 });
