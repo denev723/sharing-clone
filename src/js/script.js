@@ -21,6 +21,10 @@ $(document).ready(function () {
   var categoryBg = $(".main-category > .category-wrapper");
   categoryBg.css("height", categoryHeight);
 
+  var lecInfo = $(".lecture-video > .lecture-info");
+  var videoBox = $(".video-wrapper > .video > .video-img");
+  console.log(videoBox.width());
+
   // var mainNotice = $(".main-notice");
   // var noticeTitle = $(".main-notice > .notice-title");
   // var noticeContent = $(".main-notice > .notice-content");
