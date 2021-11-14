@@ -63,25 +63,56 @@ $(document).ready(function () {
     }
   });
 
-  $(window).on("scroll", function () {
-    if ($(this).scrollTop() >= 365) {
-      if ($(".page-main .search-box").css("position") !== "fixed") {
-        $(".page-main .search-box")
-          .css({
-            position: "fixed",
-            height: "100%",
-            overflow: "scroll",
-          })
-          .scrollTop(365);
-      }
+  $(window).resize(function () {
+    if ($(window).width() < 1400) {
+      $(window).on("scroll", function () {
+        if ($(this).scrollTop() >= 700) {
+          if ($(".page-main .search-box").css("position") !== "fixed") {
+            $(".page-main .search-box")
+              .css({
+                position: "fixed",
+                height: "100%",
+                overflow: "scroll",
+              })
+              .scrollTop(700);
+          }
+        } else {
+          $(".page-main .search-box").css({
+            position: "absolute",
+            height: "",
+            overflow: "",
+          });
+        }
+      });
     } else {
-      $(".page-main .search-box").css({
-        position: "absolute",
-        height: "",
-        overflow: "",
+      $(window).on("scroll", function () {
+        if ($(this).scrollTop() >= 365) {
+          if ($(".page-main .search-box").css("position") !== "fixed") {
+            $(".page-main .search-box")
+              .css({
+                position: "fixed",
+                height: "100%",
+                overflow: "scroll",
+              })
+              .scrollTop(365);
+          }
+        } else {
+          $(".page-main .search-box").css({
+            position: "absolute",
+            height: "",
+            overflow: "",
+          });
+        }
       });
     }
   });
+});
+
+var description = document.querySelectorAll(".lec-description");
+description.forEach(function (item) {
+  if (item.innerText.length > 50) {
+    item.innerText = `${item.innerText.substring(0, 50)}...`;
+  }
 });
 
 var period = document.getElementById("period-range"),
@@ -89,7 +120,7 @@ var period = document.getElementById("period-range"),
   dec = document.getElementById("decrement"),
   mid = document.getElementById("middle");
 
-period.addEventListener("change", function () {
+period.addEventListener("input", function () {
   if ($(this).val() === "0") {
     $(".short").css({ display: "block" });
     $(".middle").css({ display: "none" });
@@ -171,5 +202,4 @@ if (mql.matches) {
     });
   });
 } else {
-  console.log("hoo!");
 }
