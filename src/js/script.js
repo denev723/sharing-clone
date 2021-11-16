@@ -64,7 +64,7 @@ $(document).ready(function () {
   });
 
   $(window).resize(function () {
-    if ($(window).width() < 1400) {
+    if (1250 < $(window).width() && $(window).width() < 1400) {
       $(window).on("scroll", function () {
         if ($(this).scrollTop() >= 700) {
           if ($(".page-main .search-box").css("position") !== "fixed") {
@@ -84,7 +84,7 @@ $(document).ready(function () {
           });
         }
       });
-    } else {
+    } else if ($(window).width() > 1400) {
       $(window).on("scroll", function () {
         if ($(this).scrollTop() >= 365) {
           if ($(".page-main .search-box").css("position") !== "fixed") {
@@ -106,6 +106,48 @@ $(document).ready(function () {
       });
     }
   });
+
+  if (1250 < $(window).width() && $(window).width() < 1400) {
+    $(window).on("scroll", function () {
+      if ($(this).scrollTop() >= 700) {
+        if ($(".page-main .search-box").css("position") !== "fixed") {
+          $(".page-main .search-box")
+            .css({
+              position: "fixed",
+              height: "100%",
+              overflow: "scroll",
+            })
+            .scrollTop(700);
+        }
+      } else {
+        $(".page-main .search-box").css({
+          position: "absolute",
+          height: "",
+          overflow: "",
+        });
+      }
+    });
+  } else if ($(window).width() > 1400) {
+    $(window).on("scroll", function () {
+      if ($(this).scrollTop() >= 365) {
+        if ($(".page-main .search-box").css("position") !== "fixed") {
+          $(".page-main .search-box")
+            .css({
+              position: "fixed",
+              height: "100%",
+              overflow: "scroll",
+            })
+            .scrollTop(365);
+        }
+      } else {
+        $(".page-main .search-box").css({
+          position: "absolute",
+          height: "",
+          overflow: "",
+        });
+      }
+    });
+  }
 });
 
 var description = document.querySelectorAll(".lec-description");

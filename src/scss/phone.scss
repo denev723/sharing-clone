@@ -1,0 +1,940 @@
+// 공통
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.pc {
+  display: none !important;
+}
+
+.mb {
+  display: block !important;
+}
+
+// side-menu
+.left-side {
+  left: -90px;
+}
+
+.right-side {
+  right: -70px;
+}
+
+// search-box
+.search-box {
+  position: fixed;
+  display: flex;
+  width: 300px;
+  left: -300px;
+
+  .content-wrapper {
+    width: 300px;
+
+    .site-logo {
+      .main-logo {
+        width: calc(221px * 0.8);
+        height: calc(59px * 0.8);
+        margin-left: 17px;
+      }
+    }
+
+    .search-sub-logo {
+      width: calc(336px * 0.7);
+      height: calc(163px * 0.7);
+      margin-left: 12px;
+    }
+
+    .search-form {
+      margin-bottom: 132px;
+      padding: 0px 28px;
+
+      .search-input {
+        input {
+          height: calc(60px * 0.8);
+
+          &::placeholder {
+            font-size: 14px;
+          }
+        }
+
+        .search-logo {
+          top: 14px;
+        }
+      }
+
+      .search-category {
+        .category-group {
+          .category-title {
+            font-size: 15px;
+          }
+
+          div {
+            .category-btn {
+              .title {
+                font-size: 11px;
+              }
+
+              .number {
+                font-size: 11px;
+              }
+            }
+          }
+        }
+      }
+
+      .search-period {
+        .title {
+          font-size: 15px;
+        }
+
+        .title-group {
+          font-size: 11px;
+        }
+      }
+
+      .btn-wrapper {
+        .submit-btn {
+          height: calc(56px * 0.8);
+          font-size: 17px;
+        }
+      }
+    }
+
+    .search-box-handle {
+      display: block;
+      position: fixed;
+      top: 150px;
+      left: 0px !important;
+      width: calc(80px * 0.7);
+      padding: calc(34px * 0.8) 0;
+
+      .mag {
+        width: calc(27px * 0.8);
+        height: calc(27px * 0.8);
+      }
+
+      .title {
+        font-size: 13px;
+      }
+
+      .arr {
+        width: calc(12px * 0.8);
+        height: calc(18px * 0.8);
+        margin-top: 30px;
+      }
+    }
+  }
+
+  .content-bg {
+    display: none;
+    width: calc(100% - 300px);
+  }
+
+  &.on {
+    left: 0 !important;
+    .content-wrapper {
+      .search-box-handle {
+        left: 300px !important;
+      }
+    }
+  }
+}
+
+// site-header
+.site-header.mb {
+  display: flex !important;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0 !important;
+  padding: 25px 20px !important;
+  border-bottom: 1px solid #eee;
+
+  .sitemap-open {
+    .menu-btn {
+      background-image: url(/src/images/menu-bar-m.png);
+      width: 22px;
+      height: 20px;
+    }
+  }
+
+  .site-logo {
+    .main-logo {
+      background-image: url(/src/images/site-logo-sub.png);
+      width: calc(221px * 0.8) !important;
+      height: calc(59px * 0.8) !important;
+    }
+  }
+
+  .gnb {
+    .login-logo {
+      background-image: url(/src/images/login-icon.png);
+      width: 32px;
+      height: 32px;
+    }
+  }
+}
+
+// sitemap
+.sitemap {
+  .wrapper {
+    width: 300px;
+    padding-bottom: 90px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .btn-wrapper {
+      margin-top: 39px;
+      margin-bottom: 15px;
+      padding: 0px 20px;
+
+      .btn-close {
+        width: calc(27px * 0.8);
+        height: calc(27px * 0.8);
+      }
+    }
+
+    ul {
+      padding: 0 20px;
+
+      .nav-depth-1 {
+        padding: 20px 0;
+
+        .l-title {
+          font-size: 15px;
+        }
+
+        ul {
+          margin-top: 10px;
+          padding: 0 15px;
+
+          .nav-depth-2 {
+            a {
+              .logo {
+                width: calc(54px * 0.7) !important;
+                height: calc(54px * 0.7) !important;
+              }
+
+              .title {
+                font-size: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .sitemap-bg {
+    width: calc(100% - 300px);
+  }
+}
+
+// page-main
+.page-main {
+  .content-box {
+    margin-left: 0;
+    margin-right: 0;
+
+    .site-content {
+      .main-notice {
+        margin-top: 29px;
+        padding: 0;
+
+        .notice-title {
+          float: none;
+          width: 100%;
+
+          a {
+            background-image: url(/src/images/notice-title-m.png);
+            padding-top: calc(57 / 310 * 100%);
+          }
+        }
+
+        .notice-content {
+          float: none;
+          margin-left: 0;
+          width: 100%;
+
+          .notice-list {
+            .notice-item {
+              a {
+                padding: calc(23px * 0.7) 0;
+                font-size: 12px;
+              }
+            }
+          }
+        }
+      }
+
+      .main-category {
+        padding: 0;
+        margin-top: 32px;
+
+        .category-list {
+          padding: calc(36px * 0.7) calc(71px * 0.7) calc(36px * 0.7)
+            calc(81px * 0.7);
+          .category-item {
+            a {
+              .title {
+                font-size: 12px;
+              }
+            }
+
+            &:nth-child(1) {
+              a {
+                .icon {
+                  width: calc(31px * 0.7);
+                  height: calc(28px * 0.7);
+                }
+              }
+            }
+            &:nth-child(2) {
+              a {
+                .icon {
+                  width: calc(29px * 0.7);
+                  height: calc(28px * 0.7);
+                }
+              }
+            }
+            &:nth-child(3) {
+              a {
+                .icon {
+                  width: calc(25px * 0.7);
+                  height: calc(28px * 0.7);
+                }
+              }
+            }
+            &:nth-child(4) {
+              a {
+                .icon {
+                  width: calc(33px * 0.7);
+                  height: calc(28px * 0.7);
+                }
+              }
+            }
+            &:nth-child(5) {
+              a {
+                .icon {
+                  width: calc(29px * 0.7);
+                  height: calc(28px * 0.7);
+                }
+              }
+            }
+            &:nth-child(6) {
+              a {
+                .icon {
+                  width: calc(28px * 0.7);
+                  height: calc(28px * 0.7);
+                }
+              }
+            }
+            &:nth-child(7) {
+              margin-right: 50px;
+              a {
+                .icon {
+                  width: calc(35px * 0.7);
+                  height: calc(28px * 0.7);
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .main-lecture {
+        margin-top: 38px;
+        margin-bottom: 70px;
+
+        .lecture-list {
+          .title-wrapper {
+            .title {
+              font-size: 28px;
+            }
+            .sub-title {
+              font-size: 15px;
+            }
+          }
+
+          .lec-items {
+            a {
+              .lec-item-wrapper {
+                padding: 0;
+
+                .lec-item {
+                  margin-bottom: 40px;
+                  .lec-caption {
+                    .lec-title {
+                      font-size: 19px;
+                    }
+
+                    .lec-description {
+                      font-size: 12px;
+                    }
+
+                    .info {
+                      .left {
+                        width: 55%;
+                        padding: 8px 0px;
+                        .teacher {
+                          font-size: 12px;
+
+                          &::before {
+                            top: -1px;
+                          }
+                        }
+
+                        .views {
+                          font-size: 12px;
+
+                          &::before {
+                            top: 2px;
+                          }
+                        }
+                      }
+
+                      .right {
+                        width: 20%;
+                        .available {
+                          float: right;
+                          font-size: 11px;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        #rt-lecture {
+          .category-wrapper {
+            .category-btn {
+              font-size: 12px;
+            }
+          }
+
+          .lec-items {
+            margin-top: 30px;
+          }
+        }
+
+        #new-lecture {
+          margin-top: 13px;
+
+          .title::before {
+            left: 25px;
+          }
+
+          .title::after {
+            right: 25px;
+          }
+
+          .lec-items {
+            margin-top: 24px;
+          }
+        }
+
+        #rec-lecture {
+          margin-top: 13px;
+
+          .title::before {
+            left: 25px;
+          }
+
+          .title::after {
+            right: 25px;
+          }
+
+          .lec-items {
+            margin-top: 24px;
+          }
+        }
+
+        #outro {
+          padding: 0;
+          margin-top: 13px;
+
+          .title::before {
+            left: 5px;
+          }
+
+          .title::after {
+            right: 5px;
+          }
+
+          .item-list {
+            margin-top: 37px;
+
+            .item-wrapper {
+              padding: 20px 0px;
+              &:nth-child(2) {
+                border-top: 1px solid #dfdfdf;
+                border-bottom: 1px solid #dfdfdf;
+                .img-wrapper {
+                  border-left: none;
+                  border-right: none;
+                }
+              }
+            }
+          }
+
+          a {
+            .outro-img {
+              background-image: url(/src/images/outro-4-m.png);
+              padding-top: calc(311 / 1294 * 100%);
+              margin-top: 38px;
+            }
+          }
+        }
+      }
+    }
+
+    .site-footer.mb {
+      margin: 0px 20px;
+      .footer-left {
+        margin-left: -12px;
+        .footer-link {
+          a {
+            font-size: 12px;
+          }
+        }
+        address {
+          font-size: 11px;
+        }
+      }
+    }
+  }
+
+  .search-box {
+    width: 300px;
+
+    .content-wrapper {
+      .site-footer {
+        display: none;
+      }
+    }
+  }
+}
+
+// page-sub
+.page-sub {
+  .content-box {
+    margin: 0;
+
+    .snb {
+      margin-top: 0;
+      padding: 15px 0;
+
+      .no-depth {
+        width: 100%;
+      }
+
+      .depth {
+        li {
+          .btn-link {
+            font-size: 13px;
+          }
+        }
+      }
+    }
+
+    .site-content {
+      padding: 0px 20px;
+    }
+
+    .site-footer-sub {
+      margin: 0 20px;
+      .footer-left {
+        margin-left: -12px;
+        .footer-link {
+          a {
+            font-size: 12px;
+          }
+        }
+        address {
+          font-size: 11px;
+        }
+      }
+    }
+  }
+
+  .search-box {
+    width: 300px;
+  }
+}
+
+// page-lecture-find
+.page-lecture-find {
+  .site-content {
+    .page-title {
+      .title {
+        margin-left: 40px;
+        float: none;
+        font-size: 36px;
+      }
+
+      .order-btn-group {
+        margin-top: 20px;
+        float: none;
+        z-index: 0;
+      }
+    }
+
+    .lecture-filter {
+      margin-top: 20px;
+
+      .filter-list {
+        width: 70%;
+
+        .filter-item {
+          font-size: 13px;
+          margin-bottom: 8px;
+          white-space: nowrap;
+          padding: 16px 17px;
+        }
+      }
+
+      .btn-wrapper {
+        width: 30%;
+
+        .btn-reset {
+          font-size: 13px;
+          float: right;
+          padding: 15px 17px;
+        }
+      }
+    }
+
+    .result-list {
+      margin-left: 0;
+      margin-right: 0;
+
+      .lec-items {
+        padding-top: 30px;
+
+        a {
+          .lec-item-wrapper {
+            padding: 0;
+
+            .lec-item {
+              margin-bottom: 40px;
+              .lec-caption {
+                .lec-title {
+                  font-size: 19px;
+                }
+
+                .lec-description {
+                  font-size: 12px;
+                }
+
+                .info {
+                  .left {
+                    width: 55%;
+                    padding: 8px 0px;
+                    .teacher {
+                      font-size: 12px;
+
+                      &::before {
+                        top: -1px;
+                      }
+                    }
+
+                    .views {
+                      font-size: 12px;
+
+                      &::before {
+                        top: 2px;
+                      }
+                    }
+                  }
+
+                  .right {
+                    width: 20%;
+                    .available {
+                      float: right;
+                      font-size: 11px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .btn-wrapper {
+        margin-bottom: 50px;
+      }
+    }
+  }
+}
+
+// page-notice-list
+.page-notice-list {
+  .page-title {
+    margin-top: 29px;
+
+    .title {
+      font-size: 36px;
+      margin-left: 40px;
+    }
+  }
+
+  .board {
+    margin-top: 40px;
+
+    .board-default-list {
+      li {
+        font-size: 12px;
+
+        a {
+          padding: 18px 40px 18px 20px;
+
+          .left {
+            float: none;
+          }
+
+          .center {
+            float: none;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            padding: 5px 0px;
+          }
+
+          .right {
+            float: none;
+          }
+        }
+
+        &.notice {
+          a {
+            .center {
+              padding: 10px 0px;
+              .title {
+                padding-left: 38px;
+
+                &::before {
+                  width: calc(40px * 0.7);
+                  height: calc(30px * 0.7);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .board-footer {
+      margin-bottom: 50px;
+
+      .pagination {
+        li:nth-child(6),
+        li:nth-child(7) {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+// page-notice-detail
+.page-notice-detail {
+  .page-title {
+    margin-top: 29px;
+
+    .title {
+      font-size: 36px;
+      margin-left: 40px;
+    }
+  }
+
+  .board {
+    margin-top: 40px;
+
+    .board-default-view {
+      .board-header {
+        padding: 22px 10px 14px;
+        .subject {
+          font-size: 18px;
+        }
+
+        .datetime {
+          font-size: 13px;
+        }
+      }
+
+      .board-content {
+        font-size: 13px;
+        padding-bottom: 50px;
+      }
+
+      .board-nav {
+        .item {
+          a {
+            padding: 0 20px;
+            .left {
+              margin-top: 26px;
+              margin-bottom: 27px;
+              margin-right: 25px;
+              white-space: nowrap;
+
+              .prev {
+                font-size: 13px;
+              }
+            }
+
+            .center {
+              float: none;
+              margin-top: 16px;
+              margin-bottom: 5px;
+              width: 82%;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              font-size: 13px;
+            }
+
+            .right {
+              float: none;
+              .next {
+                font-size: 13px;
+              }
+            }
+          }
+        }
+      }
+
+      .btn-wrapper {
+        margin-bottom: 50px;
+
+        .btn-list {
+          width: calc(190px * 0.7);
+          height: calc(60px * 0.7);
+        }
+      }
+    }
+  }
+}
+
+// page-lecture-faq
+.page-lecture-faq {
+  .page-title {
+    margin-top: 29px;
+
+    .title {
+      font-size: 36px;
+      margin-left: 40px;
+    }
+  }
+
+  .page-banner {
+    margin-top: 32px;
+
+    .content {
+      font-size: 13px;
+    }
+  }
+
+  .faq-form {
+    margin-top: 40px;
+
+    .faq-select {
+      width: 240px;
+    }
+
+    .btn-wrapper {
+      margin-bottom: 50px;
+
+      .btn-submit {
+        width: calc(190px * 0.7);
+        height: calc(60px * 0.7);
+      }
+    }
+  }
+}
+
+// page-part-univ
+.page-part-univ {
+  .page-title {
+    margin-top: 29px;
+
+    .title {
+      font-size: 36px;
+      margin-left: 40px;
+    }
+  }
+
+  .page-banner {
+    margin-top: 32px;
+
+    .content {
+      font-size: 13px;
+    }
+  }
+
+  .univ-list-container {
+    margin-bottom: 100px;
+
+    .univ-list {
+      .univ-item {
+        &:nth-child(1) {
+          border-top-right-radius: 6px;
+        }
+
+        &:nth-child(2) {
+          border-radius: 0;
+        }
+
+        &:nth-child(5) {
+          border-radius: 0;
+        }
+
+        &:nth-child(6) {
+          border-bottom-left-radius: 6px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .page-part-univ {
+    .univ-list-container {
+      .univ-list {
+        .univ-item:nth-child(2) {
+          border-top-right-radius: 6px;
+        }
+
+        .univ-item:nth-child(3) {
+          border-top-right-radius: 0px;
+        }
+
+        .univ-item:nth-child(4) {
+          border-bottom-left-radius: 0px;
+        }
+
+        .univ-item:nth-child(5) {
+          border-bottom-left-radius: 6px;
+        }
+      }
+    }
+  }
+}
+
+// page-preparing-page
+.page-preparing-page {
+  .prepare-img {
+    width: 100%;
+  }
+}
