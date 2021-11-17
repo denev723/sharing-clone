@@ -2546,7 +2546,6 @@ ul {
     .video-wrapper {
       display: flex;
       .video {
-        max-width: 860px;
         width: 100%;
         position: relative;
 
@@ -2621,7 +2620,8 @@ ul {
               width: 30px;
               height: 30px;
               position: absolute;
-              top: 16px;
+              top: 50%;
+              transform: translateY(-50%);
               left: 0;
             }
           }
@@ -2653,7 +2653,8 @@ ul {
                 width: 25px;
                 height: 25px;
                 position: absolute;
-                top: -3px;
+                top: 50%;
+                transform: translateY(-50%);
                 left: 0;
               }
             }
@@ -2722,48 +2723,54 @@ ul {
             height: 120px;
           }
 
-          .lec-title {
+          .info {
             flex: 1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             margin-left: 18px;
 
-            p {
-              margin: 0;
-              font-size: 15px;
-              letter-spacing: -1px;
-              color: #333;
+            .lec-title {
+              p {
+                margin: 0;
+                font-size: 15px;
+                letter-spacing: -1px;
+                color: #333;
+              }
+
+              .title {
+                margin-bottom: 10px;
+                color: #b8b8b8;
+              }
             }
 
-            .title {
-              margin-bottom: 10px;
-              color: #b8b8b8;
-            }
-          }
+            .play-time {
+              position: relative;
+              padding-right: 63px;
 
-          .play-time {
-            position: relative;
-            padding-right: 63px;
+              span {
+                font-size: 15px;
+                letter-spacing: -1px;
+                color: #333;
+              }
 
-            span {
-              font-size: 15px;
-              letter-spacing: -1px;
-              color: #333;
-            }
+              .blue {
+                color: $main-blue;
+              }
 
-            .blue {
-              color: $main-blue;
-            }
-
-            &::after {
-              content: "";
-              background-image: url(/src/images/play-round.png);
-              background-size: cover;
-              background-position: center;
-              background-repeat: no-repeat;
-              width: 42px;
-              height: 42px;
-              position: absolute;
-              top: -10px;
-              right: 0;
+              &::after {
+                content: "";
+                background-image: url(/src/images/play-round.png);
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                width: 42px;
+                height: 42px;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 0;
+              }
             }
           }
         }
@@ -2894,8 +2901,7 @@ ul {
             position: absolute;
             bottom: 15%;
             left: 50%;
-            transform: translate(-50%, -50%);
-
+            transform: translateX(-50%);
             &:hover {
               background-image: url(/src/images/app-btn-hover.png);
             }
