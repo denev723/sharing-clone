@@ -72,7 +72,7 @@ $(document).ready(function () {
               .css({
                 position: "fixed",
                 height: "100%",
-                overflow: "scroll",
+                overflow: "scroll"
               })
               .scrollTop(700);
           }
@@ -80,7 +80,7 @@ $(document).ready(function () {
           $(".page-main .search-box").css({
             position: "absolute",
             height: "",
-            overflow: "",
+            overflow: ""
           });
         }
       });
@@ -92,7 +92,7 @@ $(document).ready(function () {
               .css({
                 position: "fixed",
                 height: "100%",
-                overflow: "scroll",
+                overflow: "scroll"
               })
               .scrollTop(365);
           }
@@ -100,7 +100,7 @@ $(document).ready(function () {
           $(".page-main .search-box").css({
             position: "absolute",
             height: "",
-            overflow: "",
+            overflow: ""
           });
         }
       });
@@ -115,7 +115,7 @@ $(document).ready(function () {
             .css({
               position: "fixed",
               height: "100%",
-              overflow: "scroll",
+              overflow: "scroll"
             })
             .scrollTop(700);
         }
@@ -123,7 +123,7 @@ $(document).ready(function () {
         $(".page-main .search-box").css({
           position: "absolute",
           height: "",
-          overflow: "",
+          overflow: ""
         });
       }
     });
@@ -135,7 +135,7 @@ $(document).ready(function () {
             .css({
               position: "fixed",
               height: "100%",
-              overflow: "scroll",
+              overflow: "scroll"
             })
             .scrollTop(365);
         }
@@ -143,11 +143,38 @@ $(document).ready(function () {
         $(".page-main .search-box").css({
           position: "absolute",
           height: "",
-          overflow: "",
+          overflow: ""
         });
       }
     });
   }
+
+  $(".lnb").on({
+    mouseover: function () {
+      if (!$("body").hasClass("lnb-over-on")) {
+        $("body").addClass("lnb-over-on");
+        $(".lnb .depth").addClass("on");
+        $(".lnb-over").addClass("on");
+      } else {
+        clearTimeout(timer);
+      }
+    },
+    mouseleave: function () {
+      timer = setTimeout(function () {
+        if ($("body").hasClass("lnb-over-on")) {
+          $("body").removeClass("lnb-over-on");
+          $(".lnb .depth").removeClass("on");
+          $(".lnb-over").removeClass("on");
+        }
+      }, 1000);
+    }
+  });
+
+  $(".lnb .depth").on({
+    mouseover: function () {
+      clearTimeout(timer);
+    }
+  });
 });
 
 var description = document.querySelectorAll(".lec-description");
@@ -240,8 +267,7 @@ if (mql.matches) {
         val +
         "%, #82a4ff " +
         val +
-        "%, #82a4ff 100%)",
+        "%, #82a4ff 100%)"
     });
   });
-} else {
 }
