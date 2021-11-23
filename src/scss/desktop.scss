@@ -2048,6 +2048,7 @@ ul {
   .search-box.on {
     left: 90px;
     width: 100%;
+    z-index: 10;
 
     .content-wrapper {
       height: 100vh;

@@ -9592,6 +9592,7 @@ ul {
 .page-sub .search-box.on {
   left: 90px;
   width: 100%;
+  z-index: 10;
 }
 
 .page-sub .search-box.on .content-wrapper {

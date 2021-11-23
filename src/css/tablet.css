@@ -108,7 +108,7 @@
     overflow: scroll;
   }
   .page-main .search-box.on .content-wrapper .search-box-handle {
-    left: 640px;
+    left: 490px;
     -webkit-transition: left 0.5s ease-in-out;
     transition: left 0.5s ease-in-out;
   }
