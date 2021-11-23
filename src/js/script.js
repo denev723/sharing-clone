@@ -149,31 +149,53 @@ $(document).ready(function () {
     });
   }
 
-  $(".lnb").on({
-    mouseover: function () {
-      if (!$("body").hasClass("lnb-over-on")) {
-        $("body").addClass("lnb-over-on");
-        $(".lnb .depth").addClass("on");
-        $(".lnb-over").addClass("on");
-      } else {
-        clearTimeout(timer);
+  var timer;
+
+  $(".lnb-item").each(function (index, item) {
+    var childEl = $(this).children("ul");
+    item.addEventListener("mouseover", function () {
+      if (!childEl.hasClass("on")) {
+        childEl.addClass("on");
       }
-    },
-    mouseleave: function () {
+    });
+
+    item.addEventListener("mouseleave", function () {
       timer = setTimeout(function () {
-        if ($("body").hasClass("lnb-over-on")) {
-          $("body").removeClass("lnb-over-on");
-          $(".lnb .depth").removeClass("on");
-          $(".lnb-over").removeClass("on");
+        if (childEl.hasClass("on")) {
+          childEl.removeClass("on");
         }
-      }, 1000);
-    }
+      }, 300);
+    });
   });
+
+  //   $(".lnb-item").on({
+  //     mouseover: function () {
+  //       if (!$("body").hasClass("lnb-over-on")) {
+  //         $("body").addClass("lnb-over-on");
+  //         $(".lnb-item > .depth").addClass("on");
+  //       } else {
+  //         clearTimeout(timer);
+  //       }
+  //     },
+  //     mouseleave: function () {
+  //       timer = setTimeout(function () {
+  //         if ($("body").hasClass("lnb-over-on")) {
+  //           $("body").removeClass("lnb-over-on");
+  //           $(".lnb-item > .depth").removeClass("on");
+  //         }
+  //       }, 1000);
+  //     }
+  //   });
 
   $(".lnb .depth").on({
     mouseover: function () {
       clearTimeout(timer);
     }
+  });
+
+  var parentWidth = $(".lnb-item").outerWidth(true);
+  $(".lnb-item > .depth").each(function () {
+    $(this).outerWidth($(this).parent().outerWidth(true));
   });
 });
 
@@ -258,7 +280,82 @@ dec.addEventListener("click", function () {
 
 var mql = window.matchMedia("screen and (-webkit-min-device-pixel-ratio:0)");
 if (mql.matches) {
-  console.log("hey!!");
+  inc.addEventListener("click", function () {
+    period.stepUp(1);
+    var val = period.value;
+    $("#period-range").css({
+      background:
+        "linear-gradient(to right, white 0%, white " +
+        val +
+        "%, #82a4ff " +
+        val +
+        "%, #82a4ff 100%)"
+    });
+
+    if (val === "0") {
+      $(".short").css({ display: "block" });
+      $(".middle").css({ display: "none" });
+      $(".long").css({ display: "none" });
+    } else if (val === "50") {
+      $(".short").css({ display: "none" });
+      $(".middle").css({ display: "block" });
+      $(".long").css({ display: "none" });
+    } else {
+      $(".short").css({ display: "none" });
+      $(".middle").css({ display: "none" });
+      $(".long").css({ display: "block" });
+    }
+  });
+
+  mid.addEventListener("click", function () {
+    var val = period.value;
+    $("#period-range").css({
+      background:
+        "linear-gradient(to right, white 0%, white " +
+        val +
+        "%, #82a4ff " +
+        val +
+        "%, #82a4ff 100%)"
+    });
+
+    if (val === "0") {
+      period.stepUp(1);
+    } else if (val === "100") {
+      period.stepDown(1);
+    }
+    $(".short").css({ display: "none" });
+    $(".middle").css({ display: "block" });
+    $(".long").css({ display: "none" });
+  });
+
+  dec.addEventListener("click", function () {
+    period.stepDown(1);
+    var val = period.value;
+
+    $("#period-range").css({
+      background:
+        "linear-gradient(to right, white 0%, white " +
+        val +
+        "%, #82a4ff " +
+        val +
+        "%, #82a4ff 100%)"
+    });
+
+    if (val === "0") {
+      $(".short").css({ display: "block" });
+      $(".middle").css({ display: "none" });
+      $(".long").css({ display: "none" });
+    } else if (val === "50") {
+      $(".short").css({ display: "none" });
+      $(".middle").css({ display: "block" });
+      $(".long").css({ display: "none" });
+    } else {
+      $(".short").css({ display: "none" });
+      $(".middle").css({ display: "none" });
+      $(".long").css({ display: "block" });
+    }
+  });
+
   $("#period-range").on("input", function () {
     var val = $(this).val();
     $("#period-range").css({

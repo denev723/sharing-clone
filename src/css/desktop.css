@@ -7786,13 +7786,23 @@ ul {
   float: left;
 }
 
+.site-header .lnb .lnb-list .lnb-item.on a .lnb-title {
+  border-bottom: 2px solid #3e72ff;
+}
+
 .site-header .lnb .lnb-list .lnb-item .depth {
   list-style-type: none;
   display: none;
   position: absolute;
   top: 60px;
-  left: 0;
+  left: -15px;
   z-index: 9;
+  text-align: center;
+  padding: 15px 0;
+  border-radius: 10px;
+  background-color: #fff;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .site-header .lnb .lnb-list .lnb-item .depth.on {
@@ -8501,6 +8511,7 @@ ul {
   left: 0;
   width: 100%;
   height: 100vh;
+  z-index: 99;
 }
 
 .sitemap .wrapper {
