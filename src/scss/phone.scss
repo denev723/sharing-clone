@@ -31,6 +31,7 @@
   display: flex;
   width: 300px;
   left: -300px;
+  z-index: 10;
 
   .content-wrapper {
     width: 300px;
@@ -130,6 +131,31 @@
     }
   }
 
+  .search-box-handle {
+    display: block;
+    position: fixed;
+    top: 150px;
+    left: 0px !important;
+    transition: left 0.5s ease-in-out;
+    width: calc(80px * 0.7);
+    padding: calc(34px * 0.8) 0;
+
+    .mag {
+      width: calc(27px * 0.8);
+      height: calc(27px * 0.8);
+    }
+
+    .title {
+      font-size: 13px;
+    }
+
+    .arr {
+      width: calc(12px * 0.8);
+      height: calc(18px * 0.8);
+      margin-top: 30px;
+    }
+  }
+
   .content-bg {
     display: none;
     width: calc(100% - 300px);
@@ -140,7 +166,12 @@
     .content-wrapper {
       .search-box-handle {
         left: 300px !important;
+        transition: left 0.5s ease-in-out;
       }
+    }
+    .search-box-handle {
+      left: 300px !important;
+      transition: left 0.5s ease-in-out;
     }
   }
 }
